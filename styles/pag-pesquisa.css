@@ -1,0 +1,180 @@
+html, body {
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    font-family:'Montserrat',sans-serif;
+    font-weight: 400;
+    color: black;
+
+}
+
+body{
+   background-color: rgb(230, 230, 230);
+}
+
+/*---Menu---*/
+
+.header{
+    background-color:rgb(195, 195, 195);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    max-height: 120px;
+}
+.logo{
+    width: 240px;
+    margin-top: -40px;
+    margin-left: 15px;
+}
+.menu_principal{
+    margin-top: -145px;
+    margin-left: 230px;
+}
+.pesquisa_botao{
+        margin-left: 50px;   
+        margin-top: 10px;  
+}
+.menu_principal a{
+    color:#0C1A9D;
+}
+.menu_principal a:hover {
+    color:#0000FF;
+}
+#menuToogle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+
+/* Media Queries Menu */
+
+@media screen and (max-width:1000px){
+
+    .menu_principal {
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 0px;
+        padding: 0px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 0%;
+        background: rgba(0,0,0,0.7);
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+    .header {
+        position: fixed;
+        display: inherit;
+        top: 0px;
+        width: 100%;
+        z-index: 999;
+        justify-content: inherit !important;
+    }
+    .menu_principal ul li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+        color: white !important;
+        margin-left: 5px;
+    }
+    .menu_principal ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .menu-icon {
+        display: block;
+        color: black;
+        width: 50px;
+        height: inherit;
+        position: absolute !important;
+        top: 45px;
+        right: 90px;
+        line-height: 60px;
+        z-index: 999;
+    }
+    .main{
+        margin-top: 140px;
+    }
+    .menu-icon i {
+        font-size: 1.7em ;
+    }
+    .pesquisa_botao {
+        display: none;
+    }
+    #menuToogle:checked ~ label i:nth-child(2){
+            display: block;
+    }
+    #menuToogle:checked ~ label i:first-child{
+        display: none;
+    }
+    #menuToogle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+    #menuToogle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+    #menuToogle:checked ~ nav {
+        height: 100%;
+    }
+}
+@media screen and (min-width:1000px) and (max-width:1272px){
+.entrevista_mkof{
+    display: none;
+}
+.menu_principal{
+    margin-left: 178px;
+}
+.pesquisa_botao{
+    margin-left: 20px;   
+}
+
+}
+/*---Footer ---*/
+
+.footer {
+    background-color:rgb(195, 195, 195);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+}
+.logo_footer img{
+    padding-left: 50px;
+    width: 240px;
+
+}
+.logo_footer p{
+    text-align: center;
+    
+}
+
+@media screen and (max-width:1024px){
+    .footer {
+        padding: 10px;
+        margin: 0px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .area_footer p{
+        text-align: center;
+        margin-left: 40px;
+    }
+    .card{
+        margin-top: 130px;
+
+    }
+}
+
+#infos_filme{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
